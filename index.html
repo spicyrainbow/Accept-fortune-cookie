@@ -72,30 +72,58 @@
       }
       
       .fortune-label {
+        position: absolute;
   display: inline-block;       
   background-color: #fff;     
   border: 2px solid Black;   
-  padding: 2rem 5rem; 
+  padding: 0rem 5rem; 
   font-family: "Andada Pro", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;  
   font-size: 2rem;
   color: #D91D1D;
-    position: absolute;
     top: 60vh;
     left: 50vw;
          transform: translate(-50%, 0);
         align-items: center;
+
 }
 
+      
+      #current-date {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+       
+}
+
+#current-time {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+      
       .label-heading{
+        position: relative;
+        font-size: 1.2rem;
+        font-weight: 300;
         text-align: center;
-        
+        color: black;
+       
       }   
       
+      .fortune-message{
+       text-align: center;
+        
+      }
     
-    
+    .date-time
+      {
+        font-size: 1.2rem;
+        color: black;
+        
+      }
     </style>
     
     </head>
@@ -121,7 +149,7 @@
   </div> -->
     
     <div class="fortune-label">
-      <h2 class="label-heading">Current Fortune</h2>
+      <h2 class="label-heading">Current fortune</h2>
   <p class="fortune-message">Do what you love. The rest will fall into place.</p>
   <div class="date-time">
     <span id="current-time">12:34:56 PM</span>
@@ -144,7 +172,7 @@
 
   function messages(name) {
     return [
-      `hello ${name}, would you like to open a fortune cookie?`,
+      `Hi ${name}, want a fortune cookie?`,
       `hello ${name}, this is ur first fortune`,
       `hello ${name}, this is ur second fortune`,
     ]
