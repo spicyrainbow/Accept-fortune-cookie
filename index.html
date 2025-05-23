@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;500;700&display=swap" rel="stylesheet">
     
     
+    
+    
     <style>
     h1 {
         font-family: "Karma", karma-medium;
@@ -165,7 +167,16 @@
 </html>
 
 <script src="https://cdn.jsdelivr.net/gh/netizenorg/netnet-standard-library/build/nn.min.js"></script>
+
+<script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+
+
 <script>
+  
+
+  
+  
+  
   /* global nn */
   
   let user
@@ -173,8 +184,6 @@
   function messages(name) {
     return [
       `Hi ${name}, want a fortune cookie?`,
-      `hello ${name}, this is ur first fortune`,
-      `hello ${name}, this is ur second fortune`,
     ]
   }
 
@@ -201,5 +210,18 @@
     // do stuff with the messages
   }
 
+  function currentdateTime() {
+  const date = moment().format('MMMM Do YYYY, h:mm:ss a');
+
+  nn.create('span')
+    .content(dateString)
+    .addClass('date-time')
+    .addTo('body');
+}
+
+nn.on('load', currentdateTime);
+  
+  
+  
   nn.on('load', setup)
 </script>
