@@ -164,8 +164,8 @@
       }
       
       #fortune-slide{
-/*          display: none; */
-        display: flex;
+         display: none;
+/*         display: flex; */
       }
       
       
@@ -195,7 +195,7 @@
     </div>
     
     <div class="slide-layout" id="old-user-home">
-       <div class="greeting">
+       <div class="greeting" id="hi-name">
         Hi Lucy, want a fortune cookie?
       </div>
       
@@ -231,7 +231,7 @@
 
 
 <script>
-  /* global nn */
+  /* global nn, moment */
 
   let user
 
@@ -241,28 +241,53 @@
     ]
   }
 
+  function hideAllSlides() {
+    nn.get('#new-user-home').css({
+        display: 'none'
+      })
+     nn.get('#old-user-home').css({
+        display: 'none'
+      })
+     nn.get('#fortune-slide').css({
+        display: 'none'
+      })
+  }
   function saveUsername() {
     user = nn.get('#username').value
     localStorage.setItem("user-name", user)
+    hideAllSlides()
+    nn.get('#old-user-home').css({
+        display: 'flex'
+      })
+    const m = messages(user)
+    nn.get('#hi-name').content(m)  
   }
 
   function setup() {
+    localStorage.removeItem("user-name")
+    //^delete username for testing
     user = localStorage.getItem("user-name")
     console.log(user)
     if (!user) {
-      nn.get('#greeting').css({
-        display: 'block'
+      nn.get('#new-user-home').css({
+        display: 'flex'
       })
-      nn.get('#enter').on('click', saveUsername)
     } else {
-      nn.get('#greeting').css({
-        display: 'none'
+      nn.get('#old-user-home').css({
+        display: 'flex'
       })
+      const m = messages(user)
+      nn.get('#hi-name').content(m)  
     }
-
-    const m = messages(user)
-    // do stuff with the messages
   }
+  
+  function acceptCookie() {
+     hideAllSlides()
+    nn.get('#fortune-slide').css({
+        display: 'flex'
+      })
+  }
+  
 
 
   function currentDateTime() {
@@ -275,7 +300,9 @@
     document.getElementById('current-date').textContent = date;
 
   }
-
+  
+  nn.get('#enter').on('click', saveUsername)
+  nn.get('#accept').on('click', acceptCookie)
   nn.on('load', currentDateTime);
 
   nn.on('load', setup)
