@@ -46,7 +46,7 @@
       button{
          border: 2px solid #C85252;
          border-radius: 10px;
-/*         padding: 1rem 2rem; */
+        padding: 1rem 2rem;
         font-size: 1rem;
         color: #fff;
         cursor: pointer;
@@ -60,6 +60,16 @@
       }
       
        .home-page-button:hover {
+        border-color: #A84040;
+      }
+      
+       .back-button
+      {
+        background-color: #EAB362;
+     
+      }
+      
+      .back-button:hover {
         border-color: #A84040;
       }
       
@@ -86,8 +96,8 @@
       }
 
       .fortune-label {
-        position: absolute;
-        display: inline-block;
+        position: relative;
+/*         display: inline-block; */
         background-color: #fff;
         border: 2px solid Black;
         padding: 0rem 5rem;
@@ -97,9 +107,7 @@
         font-style: normal;
         font-size: 2rem;
         color: #D91D1D;
-        top: 60vh;
-        left: 50vw;
-        transform: translate(-50%, 0);
+/*         transform: translate(-50%, 0); */
         align-items: center;
 
       }
@@ -137,11 +145,30 @@
         color: black;
 
       }
-
-      .accept {
-        color: blue;
+      
+      .slide-layout{
+        display: flex;
+        flex-direction: column;
+       justify-content: center;
+        align-items: center;
       }
 
+      #new-user-home{
+        display: none;
+/*         display: flex; */
+      }
+      
+      #old-user-home{
+         display: none;
+/*         display: flex; */
+      }
+      
+      #fortune-slide{
+/*          display: none; */
+        display: flex;
+      }
+      
+      
       body {
         background-color: #FCEBC9;
       }
@@ -155,7 +182,7 @@
 
     <img class="fortune-cookie img-item" src="fortune-cookie.gif" alt="fortune-cookie">
 
-    <div id="new-user-home">
+    <div class="slide-layout" id="new-user-home">
       
       <div class="greeting">
       What's your name?
@@ -167,7 +194,7 @@
       
     </div>
     
-    <div id="old-user-home">
+    <div class="slide-layout" id="old-user-home">
        <div class="greeting">
         Hi Lucy, want a fortune cookie?
       </div>
@@ -178,7 +205,7 @@
       
     </div>
     
-    <div id="fortune-slide">
+    <div class="slide-layout" id="fortune-slide">
       <div class="fortune-label">
         <h2 class="label-heading">Current fortune</h2>
         <p class="fortune-message">Do what you love. The rest will fall into place.</p>
