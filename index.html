@@ -232,7 +232,11 @@
 
 <script>
   /* global nn, moment */
-
+let fortune=[
+  'Your day is gonna be awesome',
+  'Your day is gonna be full of surprises'
+  
+]
   let user
 
   function messages(name) {
@@ -282,10 +286,14 @@
   }
   
   function acceptCookie() {
+    currentDateTime()
      hideAllSlides()
     nn.get('#fortune-slide').css({
         display: 'flex'
       })
+    const f = nn.random(fortune)
+    nn.get('.fortune-message').content(f)  
+    // need date object
   }
   
 
@@ -303,7 +311,7 @@
   
   nn.get('#enter').on('click', saveUsername)
   nn.get('#accept').on('click', acceptCookie)
-  nn.on('load', currentDateTime);
+  
 
   nn.on('load', setup)
 </script>
