@@ -126,6 +126,10 @@
         color: black;
         
       }
+      
+      body{
+        background-color: #FCEBC9;
+      }
     </style>
     
     </head>
@@ -210,18 +214,19 @@
     // do stuff with the messages
   }
 
-  function currentdateTime() {
-  const date = moment().format('MMMM Do YYYY, h:mm:ss a');
+  
+  function currentDateTime() {
+  const now = moment();
 
-  nn.create('span')
-    .content(dateString)
-    .addClass('date-time')
-    .addTo('body');
+  const time = now.format('hh:mm:ss a');      // e.g., 12:34:56 PM
+  const date = now.format('MMM DD, YYYY');     // e.g., May 23,
+        
+  document.getElementById('current-time').textContent = time;
+  document.getElementById('current-date').textContent = date;
+  
 }
 
-nn.on('load', currentdateTime);
-  
-  
+nn.on('load', currentDateTime);
   
   nn.on('load', setup)
 </script>
