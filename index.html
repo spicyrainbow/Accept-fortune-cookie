@@ -6,60 +6,72 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    
-    
-    
+
     <style>
-    h1 {
+      h1 {
         font-family: "Karma", karma-medium;
         text-align: center;
       }
 
-      #greeting {
+      
+      .greeting {
         font-family: "Karma", serif;
         font-weight: 500;
         font-style: normal;
         color: #66402E;
         text-align: center;
         margin-top: 0px;
-   margin-bottom: 20px; 
+        margin-bottom: 20px;
         font-size: 32px;
       }
-      
-      .new-name-input {
-         display: block;
-        margin: 0 auto; width: max-content;
 
-}
-      
-      #username {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 2px solid #974B22;
-  border-radius: 10px;
-  width: 160px;
-  height: 40px;
-  box-sizing: border-box;
+      .new-name-input {
+        display: block;
+        margin: 0 auto;
+        width: max-content;
 
       }
 
-#enter {
-  padding: 0.5rem 1.5rem;
-  font-size: 1rem;
-  background-color: #C85252;
-  color: #fff;
-  border: 2px solid #C85252;
-  border-radius: 10px;
-  height: 40px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  margin-left: 0.5rem;
-}
+      #username {
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 2px solid #974B22;
+        border-radius: 10px;
+        width: 160px;
+        height: 40px;
+        box-sizing: border-box;
+
+      }
+
+      button{
+         border: 2px solid #C85252;
+         border-radius: 10px;
+/*         padding: 1rem 2rem; */
+        font-size: 1rem;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
       
-      #enter:hover {
-  border-color: #A84040;
-}
+      .home-page-button
+      {
+        background-color: #C85252;
+     
+      }
+      
+       .home-page-button:hover {
+        border-color: #A84040;
+      }
+      
+      
+      #enter {
+        padding: 0.5rem 1.5rem;
+        background-color: #C85252;
+        height: 40px;
+        margin-left: 0.5rem;
+      }
+
+     
 
       .fortune-cookie {
         /*         display: block;
@@ -72,67 +84,70 @@
         margin-top: 10px;
         margin-bottom: 20px;
       }
-      
+
       .fortune-label {
         position: absolute;
-  display: inline-block;       
-  background-color: #fff;     
-  border: 2px solid Black;   
-  padding: 0rem 5rem; 
-  font-family: "Andada Pro", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;  
-  font-size: 2rem;
-  color: #D91D1D;
-    top: 60vh;
-    left: 50vw;
-         transform: translate(-50%, 0);
+        display: inline-block;
+        background-color: #fff;
+        border: 2px solid Black;
+        padding: 0rem 5rem;
+        font-family: "Andada Pro", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2rem;
+        color: #D91D1D;
+        top: 60vh;
+        left: 50vw;
+        transform: translate(-50%, 0);
         align-items: center;
 
-}
+      }
 
-      
+
       #current-date {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-       
-}
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
 
-#current-time {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
-      
-      .label-heading{
+      }
+
+      #current-time {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+
+      .label-heading {
         position: relative;
         font-size: 1.2rem;
         font-weight: 300;
         text-align: center;
         color: black;
-       
-      }   
-      
-      .fortune-message{
-       text-align: center;
-        
+
       }
-    
-    .date-time
-      {
+
+      .fortune-message {
+        text-align: center;
+
+      }
+
+      .date-time {
         font-size: 1.2rem;
         color: black;
-        
+
       }
-      
-      body{
+
+      .accept {
+        color: blue;
+      }
+
+      body {
         background-color: #FCEBC9;
       }
     </style>
-    
-    </head>
+
+  </head>
   <body>
     <h1>
       Accept A Fortune Cookie
@@ -140,38 +155,46 @@
 
     <img class="fortune-cookie img-item" src="fortune-cookie.gif" alt="fortune-cookie">
 
-    <div id="greeting">
+    <div id="new-user-home">
+      
+      <div class="greeting">
       What's your name?
+      </div>
+      <div class="new-name-input">
+        <input id="username">
+        <button class="home-page-button" id="enter">Enter</button>
+      </div>
+      
+    </div>
+    
+    <div id="old-user-home">
+       <div class="greeting">
+        Hi Lucy, want a fortune cookie?
+      </div>
+      
+      <div>
+        <button class="home-page-button" id="accept">Accept Cookie</button>
+      </div>
+      
+    </div>
+    
+    <div id="fortune-slide">
+      <div class="fortune-label">
+        <h2 class="label-heading">Current fortune</h2>
+        <p class="fortune-message">Do what you love. The rest will fall into place.</p>
+        <div class="date-time">
+          <span id="current-time">12:34:56 PM</span>
+          <span id="current-date">May 22, 2025</span>
+        </div>
+      </div>
+      <div>
+        <button class="back-button" id="eat">Eat the cookie</button>
+      </div>
     </div>
 
-
-    <div class="new-name-input">
-  <input id="username">
-  <button id="enter">Enter</button>
-     
-</div>
-
-    <div>
-    <button id="Accept">Accept Cookie</button>
-    </div>
-     
-<!--     <div class="fortune-label">
+    <!--     <div class="fortune-label">
     Do what you love. The rest will fall into place.
   </div> -->
-    
-    <div class="fortune-label">
-      <h2 class="label-heading">Current fortune</h2>
-  <p class="fortune-message">Do what you love. The rest will fall into place.</p>
-  <div class="date-time">
-    <span id="current-time">12:34:56 PM</span>
-    <span id="current-date">May 22, 2025</span>
-    
-    
-    
-    
-    
-  </div>
-    </div> 
   </body>
 </html>
 
@@ -181,13 +204,8 @@
 
 
 <script>
-  
-
-  
-  
-  
   /* global nn */
-  
+
   let user
 
   function messages(name) {
@@ -219,19 +237,19 @@
     // do stuff with the messages
   }
 
-  
+
   function currentDateTime() {
-  const now = moment();
+    const now = moment();
 
-  const time = now.format('hh:mm:ss a');      // e.g., 12:34:56 PM
-  const date = now.format('MMM DD, YYYY');     // e.g., May 23,
-        
-  document.getElementById('current-time').textContent = time;
-  document.getElementById('current-date').textContent = date;
-  
-}
+    const time = now.format('hh:mm:ss a'); // e.g., 12:34:56 PM
+    const date = now.format('MMM DD, YYYY'); // e.g., May 23,
 
-nn.on('load', currentDateTime);
-  
+    document.getElementById('current-time').textContent = time;
+    document.getElementById('current-date').textContent = date;
+
+  }
+
+  nn.on('load', currentDateTime);
+
   nn.on('load', setup)
 </script>
