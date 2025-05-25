@@ -176,9 +176,9 @@
 
   </head>
   <body>
-    <h1>
+<!--     <h1>
       Accept A Fortune Cookie
-    </h1>
+    </h1> -->
 
     <img class="fortune-cookie img-item" src="fortune-cookie.gif" alt="fortune-cookie">
 
@@ -195,19 +195,28 @@
     </div>
     
     <div class="slide-layout" id="old-user-home">
-       <div class="greeting" id="hi-name">
+      
+      
+      <div class="greeting" id="hi-name">
         Hi Lucy, want a fortune cookie?
+      </div>
+      
+      <div class="greeting" id="heading">
+        Receive words of wisdom and find out your current fortune
       </div>
       
       <div>
         <button class="home-page-button" id="accept">Accept Cookie</button>
       </div>
       
+      <a href="#" onclick="cookieStatement()">Fortune Cookie Statement</a>
+      
+
     </div>
     
     <div class="slide-layout" id="fortune-slide">
       <div class="fortune-label">
-        <h2 class="label-heading">Current fortune</h2>
+        <h2 class="label-heading">Made in America</h2>
         <p class="fortune-message">Do what you love. The rest will fall into place.</p>
         <div class="date-time">
           <span id="current-time">12:34:56 PM</span>
@@ -291,6 +300,14 @@ let fortune=[
     nn.get('#fortune-slide').css({
         display: 'flex'
       })
+  }
+    
+    function eatCookie() {
+     hideAllSlides()
+    nn.get('#old-user-home').css({
+        display: 'flex'
+      })
+      
     const f = nn.random(fortune)
     nn.get('.fortune-message').content(f)  
     // need date object
@@ -311,6 +328,7 @@ let fortune=[
   
   nn.get('#enter').on('click', saveUsername)
   nn.get('#accept').on('click', acceptCookie)
+  nn.get('#eat').on('click', eatCookie)
   
 
   nn.on('load', setup)
