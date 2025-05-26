@@ -211,6 +211,13 @@ width: 50vw;               /* fixed width */
          display: none;
         margin-top: 40vh;
 /*         display: flex; */
+        width: 50vw;               /* fixed width */
+  padding: 3rem;              /* space inside the box */
+/*   margin: 2rem auto;  */
+        background-color: #FFFAF0;     /* white background */
+  border: 2px solid #66402E;     /* light grey border */
+  border-radius: 20px;  
+  
       }
       
       body {
@@ -253,11 +260,12 @@ width: 50vw;               /* fixed width */
         <button class="home-page-button" id="accept">Accept Cookie</button>
       </div>
       
+      
       <a href="#" id="cookie-statement" class="greeting" onclick="cookieStatement()">Fortune Cookie Statement</a>
       
        </div>
       
-<!--       <div class="slide-layout" id="cookie-statement-slide">
+      <div class="slide-layout" id="cookie-statement-slide">
 
         
         <div id="statement">
@@ -266,14 +274,14 @@ width: 50vw;               /* fixed width */
 
 
         <div class="greeting" id="statement-body">
-          This is a digital fortune cookie ready to be shared anywhere in the world.
-          Fortune cookies didn’t come from China. They were introduced by Asian immigrants as a way to be accepted in America. Each cookie carries quiet stories of adaptation, growth, and the journey towards belonging. Like the internet, they help connect people across borders—one message, one click, one shared story of hope.
+          Fortune cookies didn’t come from China. They were introduced by Asian immigrants as a way to be *accepted* in America. Each cookie carries quiet stories of adaptation, growth, and the journey towards belonging. Like the internet, they help connect people across borders—one message, one click, one shared story of hope. 
+          Accept a fortune cookie when you feel like you’re on a journey alone, cuz you’re not!
         </div>
 
     
-        <a href="#" id="return-to-cookie" class="greeting" onclick="cookieStatement()">return to cookie</a>
+        <a href="#" id="return-to-cookie" class="greeting" onclick="cookieStatement()">Return to cookie</a>
 
-    </div> -->
+    </div>
       
     
     <div class="slide-layout" id="fortune-slide">
@@ -334,9 +342,7 @@ const afternoonFortunes = [
   "Hey, thank you for being you!",
   "You’re doing some very meaningful things!",
   "Your mid-day energy? Bold with a hint of chaos.",
-  "You bend, you don’t break. That’s your superpower.",
   "What feels far now will someday be part of your story of growth.",
-  "Missing your mom’s cooking is a valid personality trait."
 ];
 
 const nightFortunes = [
@@ -403,10 +409,16 @@ const nightFortunes = [
   }
   
 
-  function viewStatement() {
-    document.getElementById("cookie-statement-slide").style.display = "flex";
-  }
+  
 
+   
+  function cookieStatement() {
+  hideAllSlides();                               // hide any other slide
+  nn.get('#cookie-statement-slide').css({        // then show the statement slide
+    display: 'flex'
+  });
+}
+        
   
   function acceptCookie() {
     currentDateTime()
@@ -452,9 +464,11 @@ const nightFortunes = [
 
   }
   
+  
   nn.get('#enter').on('click', saveUsername)
   nn.get('#accept').on('click', acceptCookie)
-  nn.get('#eat').on('click', viewStatement)
+  nn.get('#cookie-statement').on('click', cookieStatement);
+nn.get('#return-to-cookie').on('click', eatCookie);
   nn.get('#eat').on('click', eatCookie)
   
 
