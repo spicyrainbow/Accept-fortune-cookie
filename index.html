@@ -280,11 +280,27 @@ width: 50vw;               /* fixed width */
 
 <script>
   /* global nn, moment */
-let fortune=[
-  'Your day is gonna be awesome',
-  'Your day is gonna be full of surprises'
+// let fortune=[
+//   'Your day is gonna be awesome',
+//   'Your day is gonna be full of surprises'
   
-]
+// ]
+
+const morningFortunes = [
+  'Your day is gonna be awesome',
+  'You’ll greet the morning with a smile!'
+];
+
+const afternoonFortunes = [
+  'Your afternoon holds a pleasant surprise.',
+  'Keep up the momentum—you’re doing great!'
+];
+
+const nightFortunes = [
+  'A peaceful evening brings clarity.',
+  'Stars in the sky, dreams on your mind—sleep well.'
+];
+
   let user
 
   function messages(name) {
@@ -339,6 +355,20 @@ let fortune=[
     nn.get('#fortune-slide').css({
         display: 'flex'
       })
+    
+    const hour = moment().hour();
+  let timeOfDay;
+  if (hour >= 5 && hour < 13) {
+    timeOfDay = morningFortunes;
+  } else if (hour >= 13 && hour < 21) {
+    timeOfDay = afternoonFortunes;
+  } else {
+    timeOfDay = nightFortunes;
+  }
+    
+     const f = nn.random(timeOfDay)
+    nn.get('.fortune-message').content(f)  
+    // get date object
   }
     
     function eatCookie() {
@@ -347,9 +377,7 @@ let fortune=[
         display: 'flex'
       })
       
-    const f = nn.random(fortune)
-    nn.get('.fortune-message').content(f)  
-    // need date object
+   
   }
   
 
