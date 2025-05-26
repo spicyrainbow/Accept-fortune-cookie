@@ -4,14 +4,13 @@
     <title>Accept A Fortune Cookie</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@1,400..840&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@1,400..840&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;500;700&display=swap" rel="stylesheet">
-    
+
 
     <style>
-     
       #hi-name {
         font-family: "Karma", karma-bold;
         font-weight: 600;
@@ -22,6 +21,7 @@
         margin-bottom: 0px;
         font-size: 32px;
       }
+
       #sub-heading {
         font-family: "Karma", karma-medium;
         max-width: 30vw;
@@ -31,7 +31,7 @@
         font-size: 32px;
         margin-top: -0.5rem;
       }
-      
+
       .greeting {
         font-family: "Karma", serif;
         font-weight: 500;
@@ -61,38 +61,36 @@
 
       }
 
-      button{
-         border: 2px solid #C85252;
-         border-radius: 10px;
+      button {
+        border: 2px solid #C85252;
+        border-radius: 10px;
         padding: 1rem 2rem;
         font-size: 1rem;
         color: #fff;
         cursor: pointer;
         transition: background-color 0.2s ease;
       }
-      
-      .home-page-button
-      {
+
+      .home-page-button {
         background-color: #C85252;
-     
+
       }
-      
-       .home-page-button:hover {
+
+      .home-page-button:hover {
         border-color: #A84040;
       }
-      
-       .back-button
-      {
+
+      .back-button {
         background-color: #EAB362;
         margin-top: 2.5rem;
-     
+
       }
-      
+
       .back-button:hover {
         border-color: #A84040;
       }
-      
-      
+
+
       #enter {
         padding: 0.5rem 1.5rem;
         background-color: #C85252;
@@ -102,7 +100,7 @@
 
       #accept {
         margin-top: -1.5rem;
-        
+
       }
 
       #cookie-statement {
@@ -113,14 +111,14 @@
       #statement-body {
         font-family: "Andada Pro", serif;
         font-size: 30px;
-         font-weight: 500;
+        font-weight: 500;
         color: #C85252;
       }
-      
+
       #return-to-cookie {
-         font-size: 18px;
+        font-size: 18px;
       }
-      
+
       .fortune-cookie {
         /*         display: block;
   margin-left: auto;
@@ -135,14 +133,15 @@
 
       #cookie3 {
         margin-top: 0px;
-         width: 200px;          /* 20% of the viewport width */
-  height: auto;  
+        width: 200px;
+        /* 20% of the viewport width */
+        height: auto;
         margin-bottom: 0px;
       }
-      
+
       .fortune-label {
         position: relative;
-/*         display: inline-block; */
+        /*         display: inline-block; */
         background-color: #fff;
         border: 2px solid Black;
         padding: 0rem 5rem;
@@ -152,7 +151,7 @@
         font-style: normal;
         font-size: 2rem;
         color: #D91D1D;
-/*         transform: translate(-50%, 0); */
+        /*         transform: translate(-50%, 0); */
         align-items: center;
 
       }
@@ -167,7 +166,7 @@
         margin-bottom: 0px;
         font-size: 32px;
       }
-      
+
 
       #current-date {
         position: absolute;
@@ -201,56 +200,60 @@
         color: black;
 
       }
-      
-      .slide-layout{
+
+      .slide-layout {
         display: flex;
         flex-direction: column;
-       justify-content: center;
+        justify-content: center;
         align-items: center;
         margin-top: 22vh;
       }
 
-      #new-user-home{
+      #new-user-home {
         display: none;
-/*         display: flex; */
+        /*         display: flex; */
       }
-      
-      #old-user-home{
-         display: none;
-/*         display: flex; */
-        
-width: 50vw;               /* fixed width */
-  padding: 3rem;              /* space inside the box */
-  margin: 2rem auto; 
-        background-color: #FFFAF0;     /* white background */
-  border: 2px solid #66402E;     /* light grey border */
-  border-radius: 20px;  
+
+      #old-user-home {
+        display: none;
+        /*         display: flex; */
+
+        width: 50vw;
+        /* fixed width */
+        padding: 3rem;
+        /* space inside the box */
+        margin: 2rem auto;
+        background-color: #FFFAF0;
+        /* white background */
+        border: 2px solid #66402E;
+        /* light grey border */
+        border-radius: 20px;
         margin-top: 10vh;
-        
+
       }
-      
-      #fortune-slide{
-         display: none;
+
+      #fortune-slide {
+        display: none;
         margin-top: 28vh;
-/*         display: flex; */
+        /*         display: flex; */
       }
-      
-      
-      #cookie-statement-slide{
-         display: none;
-        
-/*         display: flex; */
-  flex-direction: column;
-  align-items: center;
-  width: 50vw;     
-  margin: 20vh auto 0;     
-  padding: 3rem;
-  background-color: #FFFAF0;
-  border: 2px solid #66402E;
-  border-radius: 20px;
-  
+
+
+      #cookie-statement-slide {
+        display: none;
+
+        /*         display: flex; */
+        flex-direction: column;
+        align-items: center;
+        width: 50vw;
+        margin: 20vh auto 0;
+        padding: 3rem;
+        background-color: #FFFAF0;
+        border: 2px solid #66402E;
+        border-radius: 20px;
+
       }
-      
+
       body {
         background-color: #FCEBC9;
       }
@@ -258,65 +261,65 @@ width: 50vw;               /* fixed width */
 
   </head>
   <body>
-<!--     <h1>
+    <!--     <h1>
       Accept A Fortune Cookie
     </h1> -->
 
-   
+
     <div class="slide-layout" id="new-user-home">
-       <img class="fortune-cookie img-item" src="fortune-cookie.gif" id="cookie1" alt="fortune-cookie">
+      <img class="fortune-cookie img-item" src="fortune-cookie.gif" id="cookie1" alt="fortune-cookie">
       <div class="greeting">
-      What's your name?
+        What's your name?
       </div>
       <div class="new-name-input">
         <input id="username">
         <button class="home-page-button" id="enter">Enter</button>
       </div>
-      
+
     </div>
-    
+
     <div class="slide-layout" id="old-user-home">
-      
+
       <div id="hi-name">
         Hi Lucy, want a fortune cookie?
       </div>
-      
-       <img class="fortune-cookie img-item" id="cookie2" src="fortune-cookie.gif" alt="fortune-cookie">
+
+      <img class="fortune-cookie img-item" id="cookie2" src="fortune-cookie.gif" alt="fortune-cookie">
 
       <div class="greeting" id="sub-heading">
         Your current fortune is one click away
       </div>
-      
+
       <div>
         <button class="home-page-button" id="accept">Accept Cookie</button>
       </div>
-      
-      
+
+
       <a href="#" id="cookie-statement" class="greeting" onclick="cookieStatement()">Fortune Cookie Statement</a>
-      
-       </div>
-      
-      <div class="slide-layout" id="cookie-statement-slide">
-
-        
-        <div id="statement-title">
-          The Cookie Statement
-        </div>
-
-
-        <div class="greeting" id="statement-body">
-          Fortune cookies didn’t come from China. They were introduced by Asian immigrants as a way to be *accepted* in America. Each cookie carries quiet stories of adaptation, growth, and the journey towards belonging. Like the internet, they help connect people across borders—one message, one click, one shared story of hope. 
-          Accept a fortune cookie when you feel like you’re on a journey alone, cuz you’re not!
-        </div>
-
-    
-        <a href="#" id="return-to-cookie" class="greeting" onclick="cookieStatement()">Return to cookie</a>
 
     </div>
-      
-    
+
+    <div class="slide-layout" id="cookie-statement-slide">
+
+
+      <div id="statement-title">
+        The Cookie Statement
+      </div>
+
+
+      <div class="greeting" id="statement-body">
+        Fortune cookies didn’t come from China. They were introduced by Asian immigrants as a way to be *accepted* in America. Each cookie carries quiet stories of adaptation, growth, and the journey towards belonging. Like the internet, they help connect people across borders—one message, one click, one shared story of hope.
+        Accept a fortune cookie when you feel like you’re on a journey alone, cuz you’re not!
+      </div>
+
+
+      <a href="#" id="return-to-cookie" class="greeting" onclick="cookieStatement()">Return to cookie</a>
+
+    </div>
+
+
     <div class="slide-layout" id="fortune-slide">
-        <img class="fortune-cookie img-item" id="cookie3" src="fortune-cookie.gif" alt="fortune-cookie">
+      <img class="fortune-cookie img-item" id="cookie3" src="fortune-cookie.gif" alt="fortune-cookie">
       <div class="fortune-label">
         <h2 class="label-heading">Made in America</h2>
         <p class="fortune-message">Do what you love. The rest will fall into place.</p>
@@ -343,66 +346,57 @@ width: 50vw;               /* fixed width */
 
 <script>
   /* global nn, moment */
-// let fortune=[
-//   'Your day is gonna be awesome',
-//   'Your day is gonna be full of surprises'
-  
-// ]
-
-const morningFortunes = [
-  "Wakey wakey!",
+  const morningFortunes = [
+    "Wakey wakey!",
     "Congratulations on defeating your bed. A true warrior.",
-  "Today’s energy? Unstoppable, like you on a good hair day.",
-  "You’re a morning person—you just need 3 hours to warm up.",
-  "Something good is waiting for you. Stretch and go find it.",
-  "You bring light into rooms. Let today reflect that back.",
-  "You’re off to a great start!",
-   "Pick one thing you’re excited about today. Just one. That’s enough to begin.",
-  "Today doesn’t need to be perfect. It just needs to begin.",
-  "One little step at a time today!",
-  "Drink your water. Call your grandma. Take on the world.",
-  "Even your yawns are full of potential.",
-  "Somewhere across the world, someone’s thinking of you. (It’s me.)",
-  "Go off to your grand adventure today!"
-  
-  
-];
+    "Today’s energy? Unstoppable, like you on a good hair day.",
+    "You’re a morning person—you just need 3 hours to warm up.",
+    "Something good is waiting for you. Stretch and go find it.",
+    "You bring light into rooms. Let today reflect that back.",
+    "You’re off to a great start!",
+    "Pick one thing you’re excited about today. Just one. That’s enough to begin.",
+    "Today doesn’t need to be perfect. It just needs to begin.",
+    "One little step at a time today!",
+    "Drink your water. Call your grandma. Take on the world.",
+    "Even your yawns are full of potential.",
+    "Somewhere across the world, someone’s thinking of you. (It’s me.)",
+    "Go off to your grand adventure today!"
+  ];
 
-const afternoonFortunes = [
-  "hey, I know the day feels long, but you're not in this alone!",
-  "Sending a mid-day boost from miles away. You’re not alone in this hustle.",
+  const afternoonFortunes = [
+    "hey, I know the day feels long, but you're not in this alone!",
+    "Sending a mid-day boost from miles away. You’re not alone in this hustle.",
     "You’ve made it halfway. That’s 100% impressive.",
-   "If no one checked in on you today, this message is doing it now.",
-   "Something good is headed your way",
-  "Everything will come your way—just be ready to catch it.",
-  "Whatever you’re handling today, you’re handling it better than you think.",
-  "if you are seeing this, it means someone across the internet is thinking of you!",
-  "Laugh a little louder—it counts as cardio.",
-  "Gosh, you looke really good right now!",
-  "keep up the good work with the rest of the day!",
-  "Your mid-day energy? Bold with a hint of chaos.",
-  "Go for a walk and take a mid-day break",
-  "What feels far now will someday be part of your story of growth.",
-  "Are you slacking off right now, me too!",
-   "If you’re overwhelmed right now, take a break. If not, take a break anyway."
-];
+    "If no one checked in on you today, this message is doing it now.",
+    "Something good is headed your way",
+    "Everything will come your way—just be ready to catch it.",
+    "Whatever you’re handling today, you’re handling it better than you think.",
+    "if you are seeing this, it means someone across the internet is thinking of you!",
+    "Laugh a little louder—it counts as cardio.",
+    "Gosh, you looke really good right now!",
+    "keep up the good work with the rest of the day!",
+    "Your mid-day energy? Bold with a hint of chaos.",
+    "Go for a walk and take a mid-day break",
+    "What feels far now will someday be part of your story of growth.",
+    "Are you slacking off right now, me too!",
+    "If you’re overwhelmed right now, take a break. If not, take a break anyway."
+  ];
 
-const nightFortunes = [
-  "One step at a time, good job today!",
-  "You have lots of great things ahead!!",
-  "Thank you for all your hard work today, you should be proud.",
-  "Some things are clearer after midnight snacks.",
-  "You’ve survived every hard day so far. Don’t forget that.",
-  "Wow long day, but good job!",
-  "Thank you for being so strong.",
-  "Look at you—still standing, still showing up. That’s power.",
-  "Omg stop staring at the screen, go to sleep!",
-  "Sometimes the solution is sleep. Or noodles.",
-  "You did your best today—even if no one saw it.",
-  "Someone from afar is thinking of you when they sleep today!",
-  "Keep up the good work tomorrow!"
-  
-];
+  const nightFortunes = [
+    "One step at a time, good job today!",
+    "You have lots of great things ahead!!",
+    "Thank you for all your hard work today, you should be proud.",
+    "Some things are clearer after midnight snacks.",
+    "You’ve survived every hard day so far. Don’t forget that.",
+    "Wow long day, but good job!",
+    "Thank you for being so strong.",
+    "Look at you—still standing, still showing up. That’s power.",
+    "Omg stop staring at the screen, go to sleep!",
+    "Sometimes the solution is sleep. Or noodles.",
+    "You did your best today—even if no one saw it.",
+    "Someone from afar is thinking of you when they sleep today!",
+    "Keep up the good work tomorrow!"
+  ];
 
   let user
 
@@ -414,31 +408,34 @@ const nightFortunes = [
 
   function hideAllSlides() {
     nn.get('#new-user-home').css({
-        display: 'none'
-      })
-     nn.get('#old-user-home').css({
-        display: 'none'
-      })
-     nn.get('#fortune-slide').css({
-        display: 'none'
-      })
-    
-  nn.get('#cookie-statement-slide').css({ display: 'none' });
+      display: 'none'
+    })
+    nn.get('#old-user-home').css({
+      display: 'none'
+    })
+    nn.get('#fortune-slide').css({
+      display: 'none'
+    })
+
+    nn.get('#cookie-statement-slide').css({
+      display: 'none'
+    });
 
   }
+
   function saveUsername() {
     user = nn.get('#username').value
     localStorage.setItem("user-name", user)
     hideAllSlides()
     nn.get('#old-user-home').css({
-        display: 'flex'
-      })
+      display: 'flex'
+    })
     const m = messages(user)
-    nn.get('#hi-name').content(m)  
+    nn.get('#hi-name').content(m)
   }
 
   function setup() {
-    localStorage.removeItem("user-name")
+    // localStorage.removeItem("user-name")
     //^delete username for testing
     user = localStorage.getItem("user-name")
     console.log(user)
@@ -451,53 +448,47 @@ const nightFortunes = [
         display: 'flex'
       })
       const m = messages(user)
-      nn.get('#hi-name').content(m)  
+      nn.get('#hi-name').content(m)
     }
   }
-  
 
-  
 
-   
   function cookieStatement() {
-  hideAllSlides();                               // hide any other slide
-  nn.get('#cookie-statement-slide').css({        // then show the statement slide
-    display: 'flex'
-  });
-}
-        
-  
+    hideAllSlides(); // hide any other slide
+    nn.get('#cookie-statement-slide').css({ // then show the statement slide
+      display: 'flex'
+    });
+  }
+
   function acceptCookie() {
     currentDateTime()
-     hideAllSlides()
+    hideAllSlides()
     nn.get('#fortune-slide').css({
-        display: 'flex'
-      })
-    
+      display: 'flex'
+    })
+
     const hour = moment().hour();
-  let timeOfDay;
-  if (hour >= 5 && hour < 13) {
-    timeOfDay = morningFortunes;
-  } else if (hour >= 13 && hour < 21) {
-    timeOfDay = afternoonFortunes;
-  } else {
-    timeOfDay = nightFortunes;
-  }
-    
-     const f = nn.random(timeOfDay)
-    nn.get('.fortune-message').content(f)  
+    let timeOfDay;
+    if (hour >= 5 && hour < 13) {
+      timeOfDay = morningFortunes;
+    } else if (hour >= 13 && hour < 21) {
+      timeOfDay = afternoonFortunes;
+    } else {
+      timeOfDay = nightFortunes;
+    }
+
+    const f = nn.random(timeOfDay)
+    nn.get('.fortune-message').content(f)
     // get date object
   }
-    
-    function eatCookie() {
-     hideAllSlides()
+
+  function eatCookie() {
+    hideAllSlides()
     nn.get('#old-user-home').css({
-        display: 'flex'
-      })
-      
-   
+      display: 'flex'
+    })
+
   }
-  
 
 
   function currentDateTime() {
@@ -508,16 +499,13 @@ const nightFortunes = [
 
     document.getElementById('current-time').textContent = time;
     document.getElementById('current-date').textContent = date;
-
   }
-  
-  
+
+
   nn.get('#enter').on('click', saveUsername)
   nn.get('#accept').on('click', acceptCookie)
   nn.get('#cookie-statement').on('click', cookieStatement);
-nn.get('#return-to-cookie').on('click', eatCookie);
+  nn.get('#return-to-cookie').on('click', eatCookie);
   nn.get('#eat').on('click', eatCookie)
-  
-
   nn.on('load', setup)
 </script>
