@@ -208,15 +208,19 @@ width: 50vw;               /* fixed width */
       
       
       #cookie-statement-slide{
-         display: none;
-        margin-top: 40vh;
-/*         display: flex; */
-        width: 50vw;               /* fixed width */
-  padding: 3rem;              /* space inside the box */
-/*   margin: 2rem auto;  */
-        background-color: #FFFAF0;     /* white background */
-  border: 2px solid #66402E;     /* light grey border */
-  border-radius: 20px;  
+/*          display: none; */
+        
+        display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 50vw;             /* whatever fixed or max-width you want */
+  margin: 40vh auto 0;     /* top | left/right(auto centers) | bottom */
+
+  padding: 3rem;
+  background-color: #FFFAF0;
+  border: 2px solid #66402E;
+  border-radius: 20px;
   
       }
       
@@ -340,7 +344,7 @@ const afternoonFortunes = [
   "Whatever you’re handling today, you’re handling it better than you think.",
   "Laugh a little louder—it counts as cardio.",
   "Hey, thank you for being you!",
-  "You’re doing some very meaningful things!",
+  "keep up the good work with the rest of the day!",
   "Your mid-day energy? Bold with a hint of chaos.",
   "What feels far now will someday be part of your story of growth.",
 ];
