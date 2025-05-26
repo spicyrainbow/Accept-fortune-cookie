@@ -19,7 +19,7 @@
         color: #66402E;
         text-align: center;
         margin-top: 0px;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
         font-size: 32px;
       }
       #sub-heading {
@@ -84,6 +84,7 @@
        .back-button
       {
         background-color: #EAB362;
+        margin-top: 2rem;
      
       }
       
@@ -104,7 +105,10 @@
         
       }
 
-     
+      #cookie-statement {
+        margin-top: 10px;
+        font-size: 18px;
+      }
 
       .fortune-cookie {
         /*         display: block;
@@ -114,7 +118,7 @@
         width: 429px;
         display: block;
         margin: 50vh auto;
-        margin-top: 10px;
+        margin-top: 0px;
         margin-bottom: 20px;
       }
 
@@ -174,6 +178,7 @@
         flex-direction: column;
        justify-content: center;
         align-items: center;
+        margin-top: 22vh;
       }
 
       #new-user-home{
@@ -182,19 +187,22 @@
       }
       
       #old-user-home{
-/*          display: none; */
-        display: flex;
+         display: none;
+/*         display: flex; */
         
 width: 50vw;               /* fixed width */
   padding: 3rem;              /* space inside the box */
   margin: 2rem auto; 
-        background-color: #fff;     /* white background */
+        background-color: #FFFAF0;     /* white background */
   border: 2px solid #66402E;     /* light grey border */
-  border-radius: 20px;         /* rounded corners */ 
+  border-radius: 20px;  
+        margin-top: 10vh;
+        
       }
       
       #fortune-slide{
          display: none;
+        margin-top: 40vh;
 /*         display: flex; */
       }
       
@@ -233,14 +241,14 @@ width: 50vw;               /* fixed width */
        <img class="fortune-cookie img-item" id="cookie2" src="fortune-cookie.gif" alt="fortune-cookie">
 
       <div class="greeting" id="sub-heading">
-        Receive words of wisdom and find out your current fortune
+        Your current fortune is one click away
       </div>
       
       <div>
         <button class="home-page-button" id="accept">Accept Cookie</button>
       </div>
       
-      <a href="#" onclick="cookieStatement()">Fortune Cookie Statement</a>
+      <a href="#" id="cookie-statement" class="greeting" onclick="cookieStatement()">Fortune Cookie Statement</a>
       
 
     </div>
