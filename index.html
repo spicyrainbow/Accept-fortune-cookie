@@ -207,6 +207,12 @@ width: 50vw;               /* fixed width */
       }
       
       
+      #cookie-statement-slide{
+         display: none;
+        margin-top: 40vh;
+/*         display: flex; */
+      }
+      
       body {
         background-color: #FCEBC9;
       }
@@ -233,7 +239,6 @@ width: 50vw;               /* fixed width */
     
     <div class="slide-layout" id="old-user-home">
       
-      
       <div id="hi-name">
         Hi Lucy, want a fortune cookie?
       </div>
@@ -250,8 +255,26 @@ width: 50vw;               /* fixed width */
       
       <a href="#" id="cookie-statement" class="greeting" onclick="cookieStatement()">Fortune Cookie Statement</a>
       
+      
+      
+      <div class="slide-layout" id="cookie-statement-slide">
+
+        
+        <div id="statement">
+          The Cookie Statement
+        </div>
+
+
+        <div class="greeting" id="statement-body">
+          This is a digital fortune cookie ready to be shared anywhere in the world.
+          Fortune cookies didn’t come from China. They were introduced by Asian immigrants as a way to be accepted in America. Each cookie carries quiet stories of adaptation, growth, and the journey towards belonging. Like the internet, they help connect people across borders—one message, one click, one shared story of hope.
+        </div>
+
+    
+        <a href="#" id="return-to-cookie" class="greeting" onclick="cookieStatement()">return to cookie</a>
 
     </div>
+      
     
     <div class="slide-layout" id="fortune-slide">
       <div class="fortune-label">
@@ -318,7 +341,7 @@ const afternoonFortunes = [
 
 const nightFortunes = [
   "One step at a time, good job today!",
-  "Lots of great things ahead!!",
+  "You have lots of great things ahead!!",
   "Thank you for all your hard work today, you should be proud.",
   "Some things are clearer after midnight snacks.",
   "You’ve survived every hard day so far. Don’t forget that.",
@@ -379,6 +402,12 @@ const nightFortunes = [
     }
   }
   
+
+  function viewStatement() {
+    document.getElementById("cookie-statement-slide").style.display = "flex";
+  }
+
+  
   function acceptCookie() {
     currentDateTime()
      hideAllSlides()
@@ -425,6 +454,7 @@ const nightFortunes = [
   
   nn.get('#enter').on('click', saveUsername)
   nn.get('#accept').on('click', acceptCookie)
+  nn.get('#eat').on('click', viewStatement)
   nn.get('#eat').on('click', eatCookie)
   
 
